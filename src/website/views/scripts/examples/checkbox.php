@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<head><title>StateSync - Radio</title></head>
+<head><title>StateSync - Checkbox</title></head>
 
     <?= $this->stateSync(null,1) ?>
 

@@ -1,6 +1,9 @@
 StateSync
 =====
 
+TODO: support .sub.property
+        write stateBind.set() + .select().suck.spit() example for radio elements
+
 StateSync is a data binding tool that allows you to use any component as a pimcore editable.
 
 Usage notes
