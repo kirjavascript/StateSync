@@ -54,7 +54,15 @@
                 if(stateSync.editmode||this.bind==1) {
 
                     // restore prop data to element if it exists
-                    if (this.data[name]) this.obj[name] = this.data[name];
+                    if (this.data[name]) {
+                        if(name[0]==".") {
+                            this.obj[name.substr(1)] = this.data[name];
+                        }
+                        else {
+                            this.obj.setAttribute(name, this.data[name]);
+                        }
+
+                    }
 
                     // add property name to the list
                     this.prop[name] = 1;
@@ -66,12 +74,15 @@
             // choose when to save properties
             event: function (evt="change") {
 
-                if(stateSync.editmode) {
+                if(stateSync.editmode && this.obj) {
                     Object
                         .keys(this.prop)
                         .forEach(d => {
                             this.obj.addEventListener(evt, e => {
-                                this.data[d] = this.obj[d];
+                                this.data[d] = 
+                                    d[0]=="." ?
+                                    this.obj[d.substr(1)] :
+                                    this.obj.getAttribute(d);
                                 write();
                             })
                         })

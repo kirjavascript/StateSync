@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<head><title>StateSync</title></head>
+<head><title>StateSync - Slider</title></head>
 
     <?= $this->stateSync() ?>
 
@@ -13,7 +13,7 @@
 stateSync
     .select("#slider")
     .bind()
-    .watch("value")
+    .watch(".value")
     .event("change")
 
 </script>

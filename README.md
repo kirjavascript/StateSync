@@ -43,11 +43,13 @@ To bind a component's data like a normal pimcore editable, use the following syn
 ```javascript
 stateSync
     .select("#slider")
-    .watch("value")
+    .watch(".value")
     .event("change")
 ```
 
 Use .watch() to name the attribute or property you wish to bind, and .event() to say when to update the data.
+
+For watching properties instead of attributes, preceed the property name with a dot.
 
 You can chain multiple .watch() and .event() statements to extend this functionality.
 
@@ -58,7 +60,7 @@ This will only save and update the data on the backend. To have the data bound o
 stateSync
     .select("#slider")
     .bind()
-    .watch("value")
+    .watch(".value")
     .event("change")
 ```
 
@@ -69,7 +71,7 @@ There are two interfaces that can be used to access bound data, (via PHP or js).
 PHP provides a simple interface for accessing data;
 
 ```PHP
-<?= $this->stateSync("#slider")['value'] ?>
+<?= $this->stateSync("#slider")['.value'] ?>
 ```
 
 If you only need PHP, it's recommended to hide your frontend data.
@@ -80,10 +82,10 @@ If you need more functionality than bind, you can use .suck() and .spit() to red
 ```javascript
 stateSync
     .select("#slider")
-    .watch("value")
+    .watch(".value")
     .event("change")
     .select("#slider-div")
-    .suck("value")
+    .suck(".value")
     .spit("innerHTML")
 ```
 
@@ -95,9 +97,9 @@ stateSync
 ```javascript
 stateSync
     .select("#slider")
-    .watch("value")
+    .watch(".value")
     .event("change")
-    .suck("value")
+    .suck(".value")
     .spit(d => console.log(d))
 ```
 
