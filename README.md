@@ -107,8 +107,8 @@ stateSync
 
 The following abstracts are only available when data is not hidden;
 
-sync.editmode evaluates to not null in editmode
+stateSync.editmode evaluates to not null in editmode
 
-sync.set(str) will overwrite an element's data
+stateSync.set(str) will overwrite an element's data
 
-sync.get(str) will return an object containing all the properties of str 
+stateSync.get(str) will return an object containing all the properties of str 
