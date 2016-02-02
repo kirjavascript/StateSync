@@ -1,0 +1,27 @@
+{
+  "name": "statesync",
+  "version": "0.0.1",
+  "description": "custom editable library for pimcore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snkenjoi/StateSync.git"
+  },
+  "keywords": [
+    "???"
+  ],
+  "author": "thom barlow",
+  "license": "ISC",
+  "homepage": "https://github.com/snkenjoi/StateSync#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-uglify": "^1.4.2",
+    "rimraf": "^2.5.1"
+  }
+}
