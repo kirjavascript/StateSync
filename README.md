@@ -103,6 +103,8 @@ stateSync
     .spit(d => console.log(d))
 ```
 
+More examples are available in src/website/views/scripts/examples/
+
 
 #### Core
 
