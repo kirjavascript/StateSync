@@ -61,7 +61,6 @@
                         else {
                             this.obj.setAttribute(name, this.data[name]);
                         }
-
                     }
 
                     // add property name to the list

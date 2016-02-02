@@ -41,7 +41,7 @@ class Zend_View_Helper_StateSync extends \Zend_View_Helper_Abstract
         $this->storage = json_decode($data, true);
 
         //inject environment
-        if($option!=1) {
+        if($option!=1 || $this->view->editmode) {
             echo '<script>stateSync.editmode='.($this->view->editmode?1:0).';';
             echo 'stateSync.storage('.$data.');</script>';
         }
