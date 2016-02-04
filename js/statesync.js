@@ -111,8 +111,11 @@
                 }
                 
                 return this;
-            }
+            },
 
+            node: function() {
+                return this.obj;
+            },
 
         })
     }

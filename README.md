@@ -106,6 +106,8 @@ stateSync
     .spit(d => console.log(d))
 ```
 
+.node() will return the selected DOM element.
+
 More examples are available in src/website/views/scripts/examples/
 
 
